@@ -8,8 +8,9 @@ Natural Language Inference (NLI) plays a critical role in Natural Language Proce
 - [Proposed Methodology](#experimental-methodology)
 - [Dataset Availability](#dataset-availability)
 - [Results](#results)
-- [Citation](#citation)
 - [Contact Information](#contact-information)
+- [Citation](#citation)
+
 
 ## Proposed Methodology
 ![Methodology](NLI_with_page-0001.jpg)
