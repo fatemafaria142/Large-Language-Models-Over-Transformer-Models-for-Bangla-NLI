@@ -29,55 +29,34 @@ The dataset can be accessed from [here](https://huggingface.co/datasets/csebuetn
 
 
 ## Results
-### Performance Evaluation of Pretrained CNNs for Fundus Image Classification
+### Comparative Analysis of PLMs for Different Performance Metrics
 
-| Model             | Accuracy | Precision | Recall  | F1 Score | Jaccard Score | Log Loss |
-|-------------------|----------|-----------|---------|----------|---------------|----------|
-| ResNet101         | 0.9417   | 0.9435    | 0.9417  | 0.9418   | 0.8902        | 0.2254   |
-| DenseNet169       | 0.9333   | 0.9378    | 0.9333  | 0.9333   | 0.8751        | 0.9080   |
-| Xception          | 0.9250   | 0.9284    | 0.9250  | 0.9252   | 0.8612        | 1.3931   |
-| InceptionV3       | 0.9167   | 0.9203    | 0.9167  | 0.9166   | 0.8480        | 0.8012   |
-| DenseNet121       | 0.9083   | 0.9092    | 0.9083  | 0.9075   | 0.8320        | 4.5509   |
-| InceptionResNetV2 | 0.9000   | 0.9049    | 0.9000  | 0.9008   | 0.8202        | 12.0282  |
-| ResNet50          | 0.8917   | 0.8948    | 0.8917  | 0.8926   | 0.8089        | 0.4883   |
-| EfficientNetB0    | 0.8833   | 0.8862    | 0.8833  | 0.8837   | 0.7947        | 0.6697   |
+| Model         | Accuracy | Precision | Recall  | F1-Score |
+|---------------|----------|-----------|---------|----------|
+| **BanglaBERT**| **0.8204** | **0.8222** | **0.8204** | **0.8203** |
+| Bangla BERT Base | 0.6803 | 0.6907 | 0.6812 | 0.6833 |
+| DistilBERT    | 0.6320   | 0.6358    | 0.6320  | 0.6317   |
+| mBERT         | 0.6427   | 0.6496    | 0.6428  | 0.6153   |
+| sahajBERT     | 0.6708   | 0.6791    | 0.6709  | 0.6707   |
 
 
 
-### U-Net Variants Performance Assessment for Retinal Blood Vessel Segmentation
 
-#### Using the DRIVE Dataset 
+### Comparative Analysis of LLMs for Different Performance Metrics
 
-| Models          | Backbone           | Intersection over Union (IoU) | Dice Coefficient | Mean Pixel Accuracy | Mean Modified Hausdorff Distance | Mean Surface Dice Overlap |
-|-----------------|--------------------|--------------------------------|------------------|---------------------|----------------------------------|---------------------------|
-| TransUNET       | ResNet50V2         | 0.5273                         | 0.6899           | 0.6470              | 3.852                            | 0.0151                    |
-|                 | ResNet101V2        | 0.5169                         | 0.6803           | 0.6400              | 4.0864                           | 0.0188                    |
-|                 | ResNet152V2        | 0.5250                         | 0.6879           | 0.6514              | 4.052                            | 0.0167                    |
-| Attention U-Net | ResNet50V2         | 0.6460                         | 0.7848           | 0.7953              | 2.7150                           | 0.0070                    |
-|                 | ResNet101V2        | 0.6483                         | 0.7865           | 0.8023              | 2.7341                           | 0.0054                    |
-|                 | ResNet152V2        | 0.6474                         | 0.7859           | 0.7859              | 2.6718                           | 0.0069                    |
-|                 | DenseNet121        | 0.6427                         | 0.7824           | 0.7747              | 2.7484                           | 0.0090                    |
-|                 | DenseNet169        | 0.6444                         | 0.7837           | 0.7769              | 2.6776                           | 0.0072                    |
-|                 | DenseNet201        | 0.6422                         | 0.7827           | 0.7749              | 2.6475                           | 0.0074                    |
-| Swin-UNET       | Swin Transformer   | 0.4896                         | 0.6569           | 0.6062              | 4.3675                           | 0.0178                    |
+| LLMs              | Metric    | Zero-shot | 5-shot | 10-shot | 15-shot |
+|-------------------|-----------|-----------|--------|---------|---------|
+| **GPT-3.5 Turbo** | Accuracy  | 0.8503    | 0.8657 | 0.8756  | **0.9205** |
+|                   | Precision | 0.7025    | 0.8683 | 0.8753  | **0.9219** |
+|                   | Recall    | 1.0       | 0.8624 | 0.8759  | **0.9204** |
+|                   | F1-Score  | 0.8254    | 0.8640 | 0.8748  | **0.9299** |
+| **Gemini 1.5 Pro**| Accuracy  | 0.7287    | 0.8625 | 0.8732  | **0.9146** |
+|                   | Precision | 0.5556    | 0.8652 | 0.8763  | **0.9156** |
+|                   | Recall    | 0.7143    | 0.8652 | 0.8732  | **0.9146** |
+|                   | F1-Score  | 0.6251    | 0.8652 | 0.8701  | **0.9136** |
 
-#### Using the FIVES Dataset 
 
-| Models          | Backbone           | Intersection over Union (IoU) | Dice Coefficient | Mean Pixel Accuracy | Mean Modified Hausdorff Distance | Mean Surface Dice Overlap |
-|-----------------|--------------------|--------------------------------|------------------|---------------------|----------------------------------|---------------------------|
-| TransUNET       | ResNet50V2         | 0.6436                         | 0.7791           | 0.7758              | 3.7392                           | 0.0312                    |
-|                 | ResNet101V2        | 0.6559                         | 0.7898           | 0.7764              | 3.5491                           | 0.0285                    |
-|                 | ResNet152V2        | 0.6522                         | 0.7866           | 0.7696              | 3.5278                           | 0.0319                    |
-| Attention U-Net | ResNet50V2         | 0.7175                         | 0.8353           | 0.8512              | 2.8913                           | 0.0201                    |
-|                 | ResNet101V2        | 0.7221                         | 0.8385           | 0.8507              | 2.8009                           | 0.0223                    |
-|                 | ResNet152V2        | 0.7199                         | 0.8369           | 0.8331              | 2.8134                           | 0.0378                    |
-|                 | DenseNet121        | 0.6872                         | 0.8143           | 0.7866              | 3.2814                           | 0.0591                    |
-|                 | DenseNet169        | 0.6718                         | 0.8024           | 0.8115              | 3.5513                           | 0.0235                    |
-|                 | DenseNet201        | 0.6468                         | 0.7822           | 0.7587              | 3.6267                           | 0.0293                    |
-| Swin-UNET       | Swin Transformer   | 0.5179                         | 0.6765           | 0.5987              | 4.6090                           | 0.0891                    |
 
-### Comparative Analysis of Explainable AI Methods
-![Results](Retina_Fundus_XAI.jpeg)
 
 
 ## Contact Information
