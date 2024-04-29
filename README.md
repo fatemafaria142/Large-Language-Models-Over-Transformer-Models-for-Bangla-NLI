@@ -12,7 +12,7 @@ Natural Language Inference (NLI) plays a critical role in Natural Language Proce
 - [Contact Information](#contact-information)
 
 ## Proposed Methodology
-![Methodology](Retina_Fundus.jpeg)
+![Methodology](NLI_with_page-0001.jpg)
 
     
 ## Dataset Availability
